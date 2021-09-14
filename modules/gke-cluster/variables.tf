@@ -221,3 +221,10 @@ variable "enable_shielded_nodes" {
   default     = true
   type        = bool
 }
+
+# See https://cloud.google.com/kubernetes-engine/docs/how-to/nodelocal-dns-cache
+variable "enable_dns_cache_config" {
+  description = "Enable NodeLocal DNSCache on the cluster. Changing this property on an existing cluster is a disruptive process"
+  default = false
+  type = bool
+}
